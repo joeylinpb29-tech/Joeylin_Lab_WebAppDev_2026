@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <div class="kartu">
+            <h2 id="judul-kartu">Judul Awal</h2>
+            <p class="deskripsi">Deskripsi awal yang akan diganti.</p>
+            <button id="btn-ubah">Ubah Konten</button>
+        </div>
+    </body>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+        }
+        .kartu {
+            border:1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 320px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: aliceblue;
+            cursor: pointer;
+        }
+        button:hover  {background:#1d4ed8}
+    </style>
+    <script>
+        const btn = document.getElementById("btn-ubah");
+        const judul = document.querySelector("#judul-kartu");
+        const deskripsi = document.querySelector(".deskripsi");
+        btn.addEventListener("click", () => {
+            judul.textContent = "Judul Sudah Diubah!";
+            deskripsi.textContent = "Konten ini diganti oleh JavaScript saat tombol diklik.";});
+    </script>
+</html>
