@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login LMS</title>
+        <style>
+            body {
+                background-image: url('https://lms.prasetiyamulya.ac.id/pluginfile.php/1/theme_moove/loginbgimg/1787063519/bg_login_mdl.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 150px;
+                padding-bottom: 150px;
+            }
+            div.main-box {
+                background-color: rgba(255, 255, 255);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                padding: 20px;
+                width: 800px;
+                height: auto;
+                display:flex;
+                text-align: center;
+            }
+            div.left-box {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 20px;
+                padding-right: 50px;
+                border-right: 2px solid #e2e2e2;
+            }
+            div.right-box {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 90px;
+                padding-top: 150px;
+                text-align: center;
+            }
+            img.pic {
+                text-align: center;
+                margin-bottom: 20px;
+                width: 300px;
+                height: auto;
+            }
+            input[type="email"], input[type="password"] {
+                width: 300px;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            input.placeholder {
+                color: #999;
+            }
+            button {
+                background-color: #535353;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+            a.forgot {
+                color: #535353;
+                text-decoration: none;
+                padding-top: 20px;
+                font-size: 12px;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+                font-size: 12px;
+                color: #535353;
+                align-items: center;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="main-box">
+            <div class="left-box">
+                <div>
+                    <img class="pic" src="https://keystoneacademic-res.cloudinary.com/image/upload/c_pad,w_1920,h_640/dpr_1/f_auto/q_auto/v1/element/17/171020_170975_Logo1.jpg" />
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Username or Email" />
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Password" />
+                </div>
+                <div>
+                    <button type="submit">Log in</button>
+                </div>
+                <div>
+                    <a class="forgot" href="https://www.djangoproject.com/">Lost password?</a>
+                </div>
+            </div>
+            <div class="right-box">
+                <p>This site best viewed in Google Chrome.</p>
+                <p>Cookie notice</p>
+            </div>
+        </div>
+    </body>
+</html>
