@@ -1,0 +1,767 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS Team Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)),
+                url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #1f2937;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 60px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            color: #111827;
+        }
+
+        .logo-icon {
+            width: 20px;
+            height: 20px;
+            border: 3px solid #111827;
+            border-radius: 50%;
+            position: relative;
+        }
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 6px;
+            height: 6px;
+            background-color: #111827;
+            border-radius: 50%;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-center a {
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-center a:hover {
+            color: #111827;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-login {
+            background-color: rgba(229, 231, 235, 0.8);
+            color: #374151;
+        }
+        .btn-login:hover {
+            background-color: #d1d5db;
+        }
+
+        .btn-primary {
+            background-color: #5a67d8;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #4c51bf;
+        }
+
+        .hero {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .btn-cta {
+            padding: 14px 32px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 20px;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+         * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 60px 20px 80px;
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    padding: 70px 60px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #2b2f3a;
+    margin: 0 0 20px 0;
+  }
+
+  .subtitle {
+    font-size: 19px;
+    font-weight: 300;
+    color: #8992a3;
+    max-width: 480px;
+    margin: 0 auto 55px auto;
+    line-height: 1.5;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 45px;
+    column-gap: 20px;
+  }
+
+  .feature { display: flex; flex-direction: column; align-items: center; }
+
+  .icon-box {
+    width: 68px;
+    height: 68px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .icon-box svg { width: 30px; height: 30px; }
+
+  .feature span {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2b2f3a;
+  }
+
+  .bg-pink   { background: #f9a8c9; }
+  .bg-cyan   { background: #6fcbe8; }
+  .bg-mint   { background: #8fd6b8; }
+  .bg-blue   { background: #5b7fd9; }
+  .bg-green  { background: #a8d5b5; }
+  .bg-tan    { background: #cbb69a; }
+  .bg-navy   { background: #3b5bdb; }
+  .bg-purple { background: #7c4dd9; }
+
+  @media (max-width: 700px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .card { padding: 50px 25px; }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .features {
+    background: #14141f;
+    padding: 80px 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .features .feature {
+    flex: 1;
+    min-width: 240px;
+    max-width: 360px;
+  }
+
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .feature-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .icon-moon    { background: linear-gradient(135deg, #4b4fd1, #3a3fc4); }
+  .icon-user    { background: #34c98e; }
+  .icon-sliders { background: #e85fa0; }
+
+  .features .feature h3 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .features .feature p {
+    color: #9a9ab0;
+    font-size: 19px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .cta {
+    background: #6266d1;
+    padding: 140px 40px;
+    text-align: center;
+  }
+
+  .cta h2 {
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .cta p {
+    color: #d6d7f5;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  @media (max-width: 900px) {
+    .features { flex-direction: column; padding: 60px 40px; }
+    .cta { padding: 90px 30px; }
+    .cta h2 { font-size: 36px; }
+    .cta p { font-size: 18px; }
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pp{
+    background-color: #14141f;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    color: #9ca3af;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .toggle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .toggle-label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .toggle {
+    width: 44px;
+    height: 24px;
+    background-color: #4b5563;
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .toggle::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  .plans {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .plan-card {
+    background-color: #1f2130;
+    border-radius: 12px;
+    padding: 32px;
+    width: 280px;
+    text-align: left;
+  }
+
+  .plan-name {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .plan-price {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  .plan-price span {
+    font-size: 13px;
+    color: #9ca3af;
+    font-weight: 400;
+  }
+
+  .plan-description {
+    color: #9ca3af;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+
+  .purchase-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #383b4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .purchase-btn:hover {
+    background-color: #454859;
+  }
+  footer {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      background-color: #f2f2f2;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+      margin: 15px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .footer-column ul li a:hover {
+      color: #0073e6;
+    }
+
+    .footer-column.newsletter {
+      margin-left: auto;
+      flex: 1 1 260px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .newsletter button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #0073e6;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background-color: #005bb5;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon"></div>
+            EMANATE
+        </div>
+        
+        <nav class="nav-center">
+            <a href="#">Home</a>
+            <a href="#">Style Guide</a>
+            <a href="#">Pricing</a>
+        </nav>
+        
+        <div class="nav-right">
+            <a href="#" class="btn btn-login">Log In</a>
+            <a href="#" class="btn btn-primary">Sign Up</a>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Emanate HTML Template</h1>
+            <p>A minimal and responsive HTML5 landing page built on lightweight,<br> clean and customizable code.</p>
+            <a href="#" class="btn btn-primary btn-cta">Get started, it's free!</a>
+        </div>
+    </main>
+<div class="card">
+  <h2>Based On Modular Design</h2>
+  <p class="subtitle">Build awesome websites or landing pages with simple and independent parts.</p>
+
+  <div class="grid">
+    <div class="feature">
+      <div class="icon-box bg-pink">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7" rx="1"/>
+          <rect x="14" y="3" width="7" height="7" rx="1"/>
+          <path d="M17.5 10v4"/>
+          <path d="M6.5 10v11"/>
+          <path d="M3 21h7"/>
+        </svg>
+      </div>
+      <span>Minimal Design</span>
+    </div>
+
+    <div class="feature">
+      <div class="icon-box bg-cyan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+          <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+          <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+          <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+        </svg>
+      </div>
+      <span>Rocket Fast</span>
+    </div>
+
+    <div class="feature">
+      <div class="icon-box bg-mint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="16" rx="1"/>
+          <path d="M3 9h18"/>
+          <path d="M7 4v5"/>
+        </svg>
+      </div>
+      <span>Custom Framework</span>
+    </div>
+
+    <div class="feature">
+      <div class="icon-box bg-blue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="3" width="16" height="18" rx="1"/>
+          <path d="M8 7h8"/>
+          <path d="M8 11h8"/>
+          <path d="M8 15h5"/>
+        </svg>
+      </div>
+      <span>Style Guide</span>
+    </div>
+
+    <div class="feature">
+      <div class="icon-box bg-green">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="7 8 3 12 7 16"/>
+          <polyline points="17 8 21 12 17 16"/>
+          <line x1="14" y1="4" x2="10" y2="20"/>
+        </svg>
+      </div>
+      <span>CSS + SASS</span>
+    </div>
+
+    <div class="feature">
+      <div class="icon-box bg-tan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </div>
+      <span>100% Customizable</span>
+    </div>
+
+    <div class="feature">
+      <div class="icon-box bg-navy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="8" height="8" rx="1"/>
+          <rect x="13" y="3" width="8" height="8" rx="1"/>
+          <rect x="3" y="13" width="8" height="8" rx="1"/>
+          <rect x="13" y="13" width="8" height="8" rx="1"/>
+        </svg>
+      </div>
+      <span>Modular Design</span>
+    </div>
+
+    <div class="feature">
+      <div class="icon-box bg-purple">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <span>HTML5 Valid</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="section">
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon icon-moon">
+        <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </div>
+      <h3>x2 Modules</h3>
+      <p>Each module can easily be turned into a dark version by adding .dark as class.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon icon-user">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      </div>
+      <h3>Onboarding Screens</h3>
+      <p>Additional pages to log in, sign up as well as forgot password are included.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon icon-sliders">
+        <svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2" fill="#fff" stroke="none"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2" fill="#fff" stroke="none"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="11" cy="18" r="2" fill="#fff" stroke="none"/></svg>
+      </div>
+      <h3>Unlimited Possibilities</h3>
+      <p>With a custom framework and global classes, build consistent pages with ease.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>And... fast. Really fast.</h2>
+    <p>The main focus of this template is performance, no bloat.</p>
+  </div>
+
+</div>
+
+<div class="pp">
+  <h1>Or find the perfect paid plan for your business.</h1>
+  <p class="subtitle">Thousands of people rely on our service.</p>
+
+  <div class="toggle-row">
+    <span class="toggle-label">Pay yearly:</span>
+    <div class="toggle"></div>
+  </div>
+
+  <div class="plans">
+
+    <div class="plan-card">
+      <div class="plan-name">For Professionals</div>
+      <div class="plan-price">$10 <span>/MO</span></div>
+      <p class="plan-description">Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-name">For Teams</div>
+      <div class="plan-price">$20 <span>/MO</span></div>
+      <p class="plan-description">Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-name">For Enterprises</div>
+      <div class="plan-price">$50 <span>/MO</span></div>
+      <p class="plan-description">Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+
+  </div>
+</div>
+
+</body>
+<footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Startup</h3>
+        <ul>
+          <li><a href="https://www.prasetiyamulya.ac.id/">Getting Started</a></li>
+          <li><a href="https://www.prasetiyamulya.ac.id/">Resources</a></li>
+          <li><a href="https://www.prasetiyamulya.ac.id/">Design</a></li>
+          <li><a href="https://www.prasetiyamulya.ac.id/">Tutorials</a></li>
+          <li><a href="https://www.prasetiyamulya.ac.id/">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://lms.prasetiyamulya.ac.id/login/index.php">Documentation</a></li>
+          <li><a href="https://lms.prasetiyamulya.ac.id/login/index.php">Requirements</a></li>
+          <li><a href="https://lms.prasetiyamulya.ac.id/login/index.php">License</a></li>
+          <li><a href="https://lms.prasetiyamulya.ac.id/login/index.php">Updates</a></li>
+          <li><a href="https://lms.prasetiyamulya.ac.id/login/index.php">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://x.com/">Twitter</a></li>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+          <li><a href="https://medium.com/">Medium</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column newsletter">
+        <h3>Join The Newsletter</h3>
+        <p>Get the latest news and resources right into your inbox every monday.</p>
+        <form>
+          <input type="email" placeholder="Your email..." required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      HTML Template by UI/UX Assets - © 2018, all rights reserved.
+    </div>
+</footer>
+</html>

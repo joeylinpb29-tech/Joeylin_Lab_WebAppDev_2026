@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pricing</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #14141f;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    color: #9ca3af;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .toggle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .toggle-label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .toggle {
+    width: 44px;
+    height: 24px;
+    background-color: #4b5563;
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .toggle::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  .plans {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .plan-card {
+    background-color: #1f2130;
+    border-radius: 12px;
+    padding: 32px;
+    width: 280px;
+    text-align: left;
+  }
+
+  .plan-name {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .plan-price {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  .plan-price span {
+    font-size: 13px;
+    color: #9ca3af;
+    font-weight: 400;
+  }
+
+  .plan-description {
+    color: #9ca3af;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+
+  .purchase-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #383b4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .purchase-btn:hover {
+    background-color: #454859;
+  }
+</style>
+</head>
+<body>
+<div>
+  <h1>Or find the perfect paid plan for your business.</h1>
+  <p class="subtitle">Thousands of people rely on our service.</p>
+
+  <div class="toggle-row">
+    <span class="toggle-label">Pay yearly:</span>
+    <div class="toggle"></div>
+  </div>
+
+  <div class="plans">
+
+    <div class="plan-card">
+      <div class="plan-name">For Professionals</div>
+      <div class="plan-price">$10 <span>/MO</span></div>
+      <p class="plan-description">Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-name">For Teams</div>
+      <div class="plan-price">$20 <span>/MO</span></div>
+      <p class="plan-description">Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-name">For Enterprises</div>
+      <div class="plan-price">$50 <span>/MO</span></div>
+      <p class="plan-description">Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

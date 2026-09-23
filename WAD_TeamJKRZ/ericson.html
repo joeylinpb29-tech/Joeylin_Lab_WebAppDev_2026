@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmanatePage1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            /* Background image dengan sedikit overlay putih agar teks tetap terbaca */
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)),
+                url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #1f2937;
+        }
+
+        /* --- NAVBAR / HEADER --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 60px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            color: #111827;
+        }
+
+        /* Membuat icon logo sederhana dengan CSS */
+        .logo-icon {
+            width: 20px;
+            height: 20px;
+            border: 3px solid #111827;
+            border-radius: 50%;
+            position: relative;
+        }
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 6px;
+            height: 6px;
+            background-color: #111827;
+            border-radius: 50%;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-center a {
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-center a:hover {
+            color: #111827;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* --- TOMBOL (BUTTONS) --- */
+        .btn {
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-login {
+            background-color: rgba(229, 231, 235, 0.8);
+            color: #374151;
+        }
+        .btn-login:hover {
+            background-color: #d1d5db;
+        }
+
+        .btn-primary {
+            background-color: #5a67d8;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #4c51bf;
+        }
+
+        /* --- KONTEN HERO (TENGAH) --- */
+        .hero {
+            flex-grow: 1; /* Mengisi sisa ruang di bawah navbar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .btn-cta {
+            padding: 14px 32px;
+            font-size: 1rem;
+        }
+
+        /* --- RESPONSIVE UNTUK LAYAR KECIL --- */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 20px;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon"></div>
+            EMANATE
+        </div>
+        
+        <nav class="nav-center">
+            <a href="#">Home</a>
+            <a href="#">Style Guide</a>
+            <a href="#">Pricing</a>
+        </nav>
+        
+        <div class="nav-right">
+            <a href="#" class="btn btn-login">Log In</a>
+            <a href="#" class="btn btn-primary">Sign Up</a>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Emanate HTML Template</h1>
+            <p>A minimal and responsive HTML5 landing page built on lightweight,<br> clean and customizable code.</p>
+            <a href="#" class="btn btn-primary btn-cta">Get started, it's free!</a>
+        </div>
+    </main>
+</body>
+</html>

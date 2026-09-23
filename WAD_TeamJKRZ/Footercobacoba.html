@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS Team Project</title>
+</head>
+<style>
+  footer {
+      background-color: #f2f2f2;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+      margin: 15px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .footer-column ul li a:hover {
+      color: #0073e6;
+    }
+
+    .footer-column.newsletter {
+      margin-left: auto;
+      flex: 1 1 260px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .newsletter button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #0073e6;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background-color: #005bb5;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+</style>
+<footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Startup</h3>
+        <ul>
+          <li><a href="https://www.prasetiyamulya.ac.id/">Getting Started</a></li>
+          <li><a href="https://www.prasetiyamulya.ac.id/">Resources</a></li>
+          <li><a href="https://www.prasetiyamulya.ac.id/">Design</a></li>
+          <li><a href="https://www.prasetiyamulya.ac.id/">Tutorials</a></li>
+          <li><a href="https://www.prasetiyamulya.ac.id/">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://lms.prasetiyamulya.ac.id/login/index.php">Documentation</a></li>
+          <li><a href="https://lms.prasetiyamulya.ac.id/login/index.php">Requirements</a></li>
+          <li><a href="https://lms.prasetiyamulya.ac.id/login/index.php">License</a></li>
+          <li><a href="https://lms.prasetiyamulya.ac.id/login/index.php">Updates</a></li>
+          <li><a href="https://lms.prasetiyamulya.ac.id/login/index.php">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://x.com/">Twitter</a></li>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+          <li><a href="https://medium.com/">Medium</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column newsletter">
+        <h3>Join The Newsletter</h3>
+        <p>Get the latest news and resources right into your inbox every monday.</p>
+        <form>
+          <input type="email" placeholder="Your email..." required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      HTML Template by UI/UX Assets - © 2018, all rights reserved.
+    </div>
+</footer>
