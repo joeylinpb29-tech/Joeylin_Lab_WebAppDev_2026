@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TokoLab — Katalog Produk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokolab.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="brand-name">TokoLab</div>
+  <div class="brand-sub">Praktikum Web — Digital Business Technology</div>
+</header>
+
+<div class="layout">
+
+  <!-- ================= LEFT: CATALOG ================= -->
+  <main>
+    <div class="catalog-title">KATALOG PRODUK</div>
+
+    <div class="controls">
+      <div class="search-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="searchInput" type="text" placeholder="Cari nama produk..." />
+      </div>
+      <select id="categorySelect">
+        <option value="semua">Semua Kategori</option>
+      </select>
+      <select id="sortSelect">
+        <option value="relevan">Urutkan: Relevan</option>
+        <option value="harga-asc">Harga: Rendah ke Tinggi</option>
+        <option value="harga-desc">Harga: Tinggi ke Rendah</option>
+        <option value="nama-az">Nama: A–Z</option>
+        <option value="stok-desc">Stok Terbanyak</option>
+      </select>
+    </div>
+
+    <div class="result-count" id="resultCount"></div>
+
+    <div class="grid" id="productGrid"></div>
+  </main>
+
+  <!-- ================= RIGHT: CART ================= -->
+  <aside>
+    <div class="cart-box">
+      <div class="cart-title">KERANJANG</div>
+      <div class="cart-status" id="cartStatus">Keranjang masih kosong</div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="shipping-note" id="shippingNote"></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+      <div class="voucher-row">
+        <input id="voucherInput" type="text" placeholder="Kode voucher" />
+        <button id="voucherBtn">Pakai</button>
+      </div>
+      <div class="voucher-msg" id="voucherMsg"></div>
+
+      <hr class="divider" />
+
+      <div class="sum-row"><span>Subtotal</span><span id="sumSubtotal">Rp0</span></div>
+      <div class="sum-row discount"><span>Diskon</span><span id="sumDiscount">-Rp0</span></div>
+      <div class="sum-row"><span>Ongkir</span><span id="sumShipping">Rp0</span></div>
+
+      <hr class="divider" />
+
+      <div class="total-row"><span>Total</span><span id="sumTotal">Rp0</span></div>
+
+      <button class="checkout-btn" id="checkoutBtn" disabled>Checkout</button>
+    </div>
+  </aside>
+
+</div>
+
+<script src="tokolab.js" defer></script>
+</body>
+</html>
