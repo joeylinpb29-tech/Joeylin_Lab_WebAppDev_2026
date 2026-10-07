@@ -1,0 +1,19 @@
+<html>
+    <div class="kartu">Baris 1</div>
+    <div class="kartu">Baris 2</div>
+    <div class="kartu">Baris 3</div>
+    <div class="kartu">Baris 4</div>
+    <script>
+        const kartu = document.querySelectorAll('.kartu');
+        kartu.forEach((kartu, index) => {
+            if (index % 2 === 0) {
+                kartu.style.backgroundColor = 'black';
+                kartu.style.color = 'white';
+            } else {
+                kartu.style.backgroundColor = 'white';
+                kartu.style.color = 'black';
+            }
+        });
+    </script>
+
+</html>

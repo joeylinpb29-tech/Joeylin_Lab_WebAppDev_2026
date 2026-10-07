@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <p id="angka">0</p>
+        <button id="tambah">Tambah</button>
+        
+        <script>
+            const angka = document.getElementById("angka");
+            const tambah = document.getElementById("tambah");
+
+            tambah.addEventListener("click", function() {
+                angka.textContent = parseInt(angka.textContent) + 1;
+            });
+        </script>
+</html>

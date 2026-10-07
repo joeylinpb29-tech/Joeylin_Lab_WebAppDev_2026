@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .tex {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="btn">
+            <button id="btn" onclick="alert('Button clicked!')">Click Me</button>
+        </div>
+        <div class="tex">
+            <p id="tex">change.</p>
+        </div>
+    </body>
+    <script>
+        const btn = document.querySelector('#btn');
+        btn.style.color = "red";
+        const tex = document.querySelector('#tex');
+        tex.style.color = "blue";
+
+        btn.addEventListener('click', function() {
+            tex.style.color = "green";
+            tex.textContent = "Button was clicked!";
+        });
+    </script>
+</html>
